@@ -28,7 +28,7 @@
     chdir: "{{ cras_workdir }}"
 
 - name: build cras
-  command: "make"
+  command: make CC=gcc-8 CPP=g++-8 CXX=g++-8 LD=g++-8
   args:
     creates: "{{ cras_workdir }}/src/cras"
     chdir: "{{ cras_workdir }}"
